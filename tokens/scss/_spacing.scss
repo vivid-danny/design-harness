@@ -1,0 +1,11 @@
+/// @author Vivid Seats, LLC
+/// @since 07/19/2024
+///
+/// $spacing-* and $radius-* are generated from Figma via the Token Manager — see
+/// build-scripts/sync-tokens.ts. ($border-radius-* is a separate, older scale,
+/// still hand-derived from $spacing-lg in _border-radii.scss.) This file stays as
+/// the import path so consumers of `tokens/scss/spacing` are unaffected by the
+/// slug the sync writes to.
+
+/// @group VSDS.Spacing.Core.Static
+@import '../layout-tokens/variables.scss';

@@ -1,0 +1,291 @@
+/// @author Vivid Seats, LLC
+/// @since 07/19/2024
+
+/// @group VSDS.Breakpoints.Core.Sizes
+$breakpoint-m: 48rem; // 768px
+$breakpoint-l: 64rem; // 1024px
+$breakpoint-xl: 90rem; // 1440px
+
+/// @group VSDS.Breakpoints.Specialied.Small
+$breakpoint-s-min: 0;
+$breakpoint-s-max: 47.9375rem; // 767px
+
+/// @group VSDS.Breakpoints.Specialized.Medium
+$breakpoint-m-min: $breakpoint-m; // 768px
+$breakpoint-m-max: 63.9375rem; // 1023px
+
+/// @group VSDS.Breakpoints.Specialized.Large
+$breakpoint-l-min: $breakpoint-l; // 1024px
+$breakpoint-l-max: 89.9375rem; // 1439px
+
+/// A mixin for a media query at a specific screen width. The styling provided
+/// as @content is rendered when the the screen's width is greater than or equal
+/// to the provided `$width`.
+///
+/// @param {String} $width - The minimum screen size the media query's @content will render at.
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is only visible up to 20rem';
+/// }
+///
+/// @include at(20rem) {
+///   .foo {
+///     content: 'this is only visible after 20rem';
+///   }
+/// }
+@mixin at($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+/// A mixin for a media query within a specific range of screen width. The
+/// styling provided as @content is rendered when the the screen's width is
+/// greater than or equal to the provided `$min` value and less than or equal to
+/// the provided `$max` value.
+///
+/// @param {String} $min - The minimum screen width the media query's @content will render at.
+/// @param {String} $max - The maximum screen width the media query's @content will render at.
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is only visible before 20rem or after 60rem';
+/// }
+///
+/// @include between(20rem, 60rem) {
+///   .foo {
+///     content: 'this is only visible between 20rem and 60rem';
+///   }
+/// }
+@mixin between($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+/// A mixin for a media query up to a specific screen width. The styling provided
+/// as @content is rendered when the the screen's width is greater than or equal
+/// to the provided `$width`.
+///
+/// @param {String} $width - The maximum screen size the media query's @content will render at.
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is only visible after 20rem';
+/// }
+///
+/// @include until(20rem) {
+///   .foo {
+///     content: 'this is only visible up to 20rem';
+///   }
+/// }
+@mixin until($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+/// A mixin for styling applied at small screen sizes.
+/// 0 – 47.9375rem / 767px
+/// ▬▭▭▭
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is visible at small or higher (48rem+)';
+/// }
+///
+/// @include S {
+///   .foo {
+///     content: 'this is only visible on the smallest of screens (0-48rem)';
+///   }
+/// }
+@mixin S {
+    @include until($breakpoint-s-max) {
+        @content;
+    }
+}
+
+/// A mixin for styling applied at small screen widths 48rem and up.
+/// >= 48rem / 768px
+/// ▭▬▬▬
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is only visible on the smallest of screens (0-48rem)';
+/// }
+///
+/// @include M {
+///   .foo {
+///     content: 'this is visible at small or higher (48rem+)';
+///   }
+/// }
+@mixin M {
+    @include at($breakpoint-m) {
+        @content;
+    }
+}
+
+/// A mixin for styling applied at medium screen widths only (48rem-64rem).
+/// 48rem / 768px – 63.9375rem / 1023px
+/// ▭▬▭▭
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is visible at less than 48rem or greater than 64rem';
+/// }
+///
+/// @include M-only {
+///   .foo {
+///     content: 'this is visible between 48rem and 64rem';
+///   }
+/// }
+@mixin M-only {
+    @include between($breakpoint-m-min, $breakpoint-m-max) {
+        @content;
+    }
+}
+
+/// A mixin for styling applied at small and medium screen widths only (0-64rem).
+/// 0 – 63.9375rem / 1023px
+/// ▬▬▭▭
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is visible after 64rem';
+/// }
+///
+/// @include M-down {
+///   .foo {
+///     content: 'this is only visible until 64rem';
+///   }
+/// }
+@mixin M-down {
+    @include until($breakpoint-m-max) {
+        @content;
+    }
+}
+
+/// A mixin for styling applied at small screen widths 64rem and up.
+/// >= 64rem / 1024px
+/// ▭▭▬▬
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is only visible on the smallest of screens (0-64rem)';
+/// }
+///
+/// @include L {
+///   .foo {
+///     content: 'this is visible at small or higher (64rem+)';
+///   }
+/// }
+@mixin L {
+    @include at($breakpoint-l) {
+        @content;
+    }
+}
+
+/// A mixin for styling applied at large screen widths only (64rem-90rem).
+/// 64rem / 1024px – 89.9375rem / 1439px
+/// ▭▭▬▭
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is visible at less than 64rem or greater than 90rem';
+/// }
+///
+/// @include L-only {
+///   .foo {
+///     content: 'this is visible between 64rem and 90rem';
+///   }
+/// }
+@mixin L-only {
+    @include between($breakpoint-l-min, $breakpoint-l-max) {
+        @content;
+    }
+}
+
+/// A mixin for styling applied at small, medium, and large screen widths only.
+/// 0 – 89.9375rem / 1439px
+/// ▬▬▬▭
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is visible after 1441px';
+/// }
+///
+/// @include L-down {
+///   .foo {
+///     content: 'this is only visible until 1440px';
+///   }
+/// }
+@mixin L-down {
+    @include until($breakpoint-l-max) {
+        @content;
+    }
+}
+
+/// A mixin for styling applied at extra large screen sizes.
+/// >= 90rem / 1440px
+/// ▭▭▭▬
+///
+/// @content - Selectors and styling applied when the breakpoint is active.
+///
+/// @output - The styling/selectors provided as @content wrapped in a media query.
+///
+/// @example
+/// .foo {
+///   content: 'this is only visible below 90rem';
+/// }
+///
+/// @include L {
+///   .foo {
+///     content: 'this is visible at 90rem or higher';
+///   }
+/// }
+@mixin XL {
+    @include at($breakpoint-xl) {
+        @content;
+    }
+}

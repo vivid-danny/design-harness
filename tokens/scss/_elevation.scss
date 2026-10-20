@@ -1,0 +1,236 @@
+/// @group VSDS.Elevation.Specialized
+$elevation-0: 0 0 0 transparent;
+$elevation-1: 0 0.0625rem 0.25rem color-mix($gray-600 0.75, transparent 0.25);
+$elevation-2: 0 0.125rem 0.5rem color-mix($gray-600 0.75, transparent 0.25);
+$elevation-3: 0 0.1875rem 0.75rem color-mix($gray-600 0.7, transparent 0.3);
+$elevation-4: 0 0.25rem 1rem color-mix($gray-600 0.7, transparent 0.3);
+
+/// The colors in Figma say "Gray 6" which we assume means Gray-600 but when the
+/// shadow color is inspected in Dev Mode the color on the Elevation page
+/// (#4E5162) is different than the color defined by Gray 600 on the Colors page
+/// (#474B5E). These tokens use the color strictly defined on the Elevation page.
+/// @group VSDS.Elevation.Specialized.Strict
+$elevation-1-strict: 0 0.0625rem 0.25rem #4e51623f;
+$elevation-2-strict: 0 0.125rem 0.5rem #4e51623f;
+$elevation-3-strict: 0 0.1875rem 0.75rem #4e51624c;
+$elevation-4-strict: 0 0.25rem 1rem #4e51624c;
+
+/// Placeholder for box shadow with no elevation
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-0;
+///   padding: 0.625rem;
+/// }
+%box-shadow-0 {
+    box-shadow: $elevation-0;
+}
+
+/// Placeholder for box shadow with 1 level of elevation
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-1;
+///   padding: 0.625rem;
+/// }
+%box-shadow-1 {
+    box-shadow: $elevation-1;
+}
+
+/// Placeholder for box shadow with 2 levels of elevation
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-2;
+///   padding: 0.625rem;
+/// }
+%box-shadow-2 {
+    box-shadow: $elevation-2;
+}
+
+/// Placeholder for box shadow with 3 levels of elevation
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-3;
+///   padding: 0.625rem;
+/// }
+%box-shadow-3 {
+    box-shadow: $elevation-3;
+}
+
+/// Placeholder for box shadow with 4 levels of elevation
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-4;
+///   padding: 0.625rem;
+/// }
+%box-shadow-4 {
+    box-shadow: $elevation-4;
+}
+
+/// Placeholder for box shadow with no elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-0-strict;
+///   padding: 0.625rem;
+/// }
+%box-shadow-0-strict {
+    box-shadow: $elevation-0;
+}
+
+/// Placeholder for box shadow with 1 level of elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-1-strict;
+///   padding: 0.625rem;
+/// }
+%box-shadow-1-strict {
+    box-shadow: $elevation-1-strict;
+}
+
+/// Placeholder for box shadow with 2 levels of elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-2-strict;
+///   padding: 0.625rem;
+/// }
+%box-shadow-2-strict {
+    box-shadow: $elevation-2-strict;
+}
+
+/// Placeholder for box shadow with 3 levels of elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-3-strict;
+///   padding: 0.625rem;
+/// }
+%box-shadow-3-strict {
+    box-shadow: $elevation-3-strict;
+}
+
+/// Placeholder for box shadow with 4 levels of elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %box-shadow-4-strict;
+///   padding: 0.625rem;
+/// }
+%box-shadow-4-strict {
+    box-shadow: $elevation-4-strict;
+}
+
+/// Placeholder for drop shadow with no elevation
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-0;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-0 {
+    filter: drop-shadow($elevation-0);
+}
+
+/// Placeholder for drop shadow with 1 level of elevation
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-1;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-1 {
+    filter: drop-shadow($elevation-1);
+}
+
+/// Placeholder for drop shadow with 2 levels of elevation
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-2;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-2 {
+    filter: drop-shadow($elevation-2);
+}
+
+/// Placeholder for drop shadow with 3 levels of elevation
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-3;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-3 {
+    filter: drop-shadow($elevation-3);
+}
+
+/// Placeholder for drop shadow with 4 levels of elevation
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-4;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-4 {
+    filter: drop-shadow($elevation-4);
+}
+
+/// Placeholder for drop shadow with no elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-0-strict;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-0-strict {
+    filter: drop-shadow($elevation-0);
+}
+
+/// Placeholder for drop shadow with 1 level of elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-1-strict;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-1-strict {
+    filter: drop-shadow($elevation-1-strict);
+}
+
+/// Placeholder for drop shadow with 2 levels of elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-2-strict;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-2-strict {
+    filter: drop-shadow($elevation-2-strict);
+}
+
+/// Placeholder for drop shadow with 3 levels of elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-3-strict;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-3-strict {
+    filter: drop-shadow($elevation-3-strict);
+}
+
+/// Placeholder for drop shadow with 4 levels of elevation and strict coloring
+///
+/// @example
+/// .foo {
+///   @extend %drop-shadow-4-strict;
+///   padding: 0.625rem;
+/// }
+%drop-shadow-4-strict {
+    filter: drop-shadow($elevation-4-strict);
+}
