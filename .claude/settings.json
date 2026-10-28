@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -I \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/prompt-ceiling.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -I \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/stop-brevity.py\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

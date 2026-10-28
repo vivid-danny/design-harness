@@ -14,7 +14,7 @@ The org runs other libraries that may each become a pack: Vivid Seats App Design
 
 - **`design.md`** is required. Platform facts, token reference, component selection table, domain logic, accessibility specifics, assets, open conflicts, and the Figma file key plus library key for scoping searches.
 - **A reference set** in `design.md`, where the pack has competitors worth naming: who they are and which adjacent industries share the mechanics. `gather-references` reads it and holds no product names of its own. Internal tools often have no ring 1 at all, which is worth stating rather than leaving blank.
-- **`tokens/`** with the `variables.css` files the prototypes import.
+- **`tokens/`** with the `.css` files the prototypes import, plus whatever a token group needs that CSS variables can't carry. For `vivid-web` that is `scss/`, because media queries can't read `var()` so breakpoints have no CSS equivalent.
 - **`assets/`** with fonts, logos, and icons.
 
 A pack with no `design.md` is not a pack. The agent will not infer one.

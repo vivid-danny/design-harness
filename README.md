@@ -39,7 +39,7 @@ production-quality.md   the bar a component clears before it's done
 design-quality.md       the craft lens, read in both kinds of work
 skills/                 the process, loaded per phase
 contexts/               packaged product contexts for quickly establishing a visual language (tokens, assets, design reference)
-evals/                  briefs to refine this harness over time
+.claude/hooks/          the checks that enforce the communication style
 ```
 
 ### Skills
@@ -59,7 +59,7 @@ evals/                  briefs to refine this harness over time
 
 ## Keeping it honest
 
-`evals/` holds fixed briefs with known-good outcomes. Re-run one after changing a rule to find out whether the change helped. Without that, every edit to `AGENTS.md` is a guess.
+A `Stop` hook checks every reply against the communication style and logs the measurements to `~/.cache/claude-brevity/metrics.jsonl`. Without a record, every edit to `AGENTS.md` is a guess about whether the wording carried any weight.
 
 ## Credit
 

@@ -1,10 +1,9 @@
 # Design Quality
 
-A lens, not a gate. None of it is binary and none of it blocks a handoff. Read it with the active context pack's `design.md`, which has the product facts these questions refer to.
 
 **This file applies to both kinds of work.** An exploration and a production build are judged by the same craft questions. `production-quality.md` asks whether the information is there, which only a decided component owes. This file asks whether the result is any good, which a direction owes from the first frame.
 
-Read it while the work is still soft, and again before you show it.
+Read this document with the active context pack's `design.md`, which has the product facts these questions refer to.
 
 **The one exemption is deliberate low fidelity.** When Danny asks for wireframes, a greybox, or a sketch, hierarchy still applies and the rest waits. Low fidelity is a request, never a default, and never something you decide to deliver on your own.
 

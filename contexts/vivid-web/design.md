@@ -25,14 +25,14 @@ Always pass it as `includeLibraryKeys`. Unscoped searches return components from
 
 ## 2. Tokens
 
-Files in `tokens/`. Import the `variables.css` files; don't hardcode the values below.
+Files in `tokens/`. Import the `.css` files; don't hardcode the values below.
 
 | Set | File | Names |
 |---|---|---|
-| Semantic colors | `tokens/semantic-colors/variables.css` | `--text-*`, `--links-*`, `--surface-*`, `--primary-*`, `--secondary-*`, `--tertiary-*`, `--background-*`, `--status-*`, `--shadow-*`, `--transparencies-*` |
-| Primitive colors | `tokens/primitive-colors/variables.css` | `--gray-*`, `--magenta-*`, `--blue-*`, ... (prefer semantic) |
-| Spacing and radius | `tokens/layout-tokens/variables.css` | `--spacing-*`, `--radius-*` |
-| Type scale | `tokens/config/typography.json` | no CSS vars; see section 3 |
+| Semantic colors | `tokens/semantic-colors.css` | `--text-*`, `--links-*`, `--surface-*`, `--primary-*`, `--secondary-*`, `--tertiary-*`, `--background-*`, `--status-*`, `--shadow-*`, `--transparencies-*` |
+| Primitive colors | `tokens/primitive-colors.css` | `--gray-*`, `--magenta-*`, `--blue-*`, ... (prefer semantic) |
+| Spacing and radius | `tokens/layout.css` | `--spacing-*`, `--radius-*` |
+| Type scale | `tokens/typography.css` | `--font-family`, `--{role}-font-size`, `-font-weight`, `-line-height`; see section 3 |
 | Breakpoints, elevation, z-index | `tokens/scss/` | SCSS only (`$breakpoint-*`, `$elevation-*`, `$z-index-*`) |
 
 ### Color (semantic)
@@ -57,7 +57,7 @@ Files in `tokens/`. Import the `variables.css` files; don't hardcode the values 
 
 ## 3. Typography
 
-Font: **GT Walsheim** (fallbacks: Poppins, Helvetica, Arial, sans-serif). Weights used: 400, 500, 700, 800. Source: `tokens/config/typography.json`.
+Font: **GT Walsheim** (fallbacks: Poppins, Helvetica, Arial, sans-serif). Weights used: 400, 500, 700, 800. Source: `tokens/typography.css`.
 
 | Role | Size / line height | Weight |
 |---|---|---|
