@@ -1,28 +1,25 @@
-# Design Harness
+# Distilling Design Excellence
 
-A folder an agent reads before it touches anything, so design production work comes out matching how I work instead of the average of a training set.
+For anyone to help them better collaborate with agents and generate better interfaces. Agents left on their own will not produce high quality interfaces. They need context and clear rules for how to execute. The goal of this harness is to make the outputs handled by agents more consistent and better than without.
 
-Brief in, Figma directions out. The agent gathers references, produces directions that diverge, uses real design system components, and says plainly what it had to make up.
 
 ## What it is for
 
-Design production and exploration. The less creative work that still deserves the creative process: taking a defined problem and producing directions, then detail.
+This harness helps navigate the different needs and stages of the product design process. The harness meets you where you are currently at and helps execute at a consistent quality bar.
 
-## What it is not for
+At the moment, this harness supports design production. This includes generating Figma mockups, creating components, documentation, and prepping assets for handoff.
 
-- **Research.** Customer and business goals come from the brief. This harness does not discover them.
-- **Problem definition.** Bring a brief, not a question.
-- **Critiquing my work.** It makes things; it does not grade them.
+This harness will change over time to accommodate more parts of the product process.
 
 ## How it is put together
 
-Three layers. The split exists so the harness stays mine while the product context swaps underneath it.
+Three layers to help an agent work through the various stages of design.
 
 | Layer | File | What belongs there |
 |---|---|---|
-| Standards | `quality.md` | The artifact. When a component is done. |
-| Behavior | `rules.md`, `skills/` | The agent. Process, tool reach, prohibitions. |
-| Context | `contexts/<pack>/` | One product's facts. Wrong on any other product. |
+| Standards | `quality.md` | Baseline checks to help determine when something is done. |
+| Behavior | `AGENTS.md`, `skills/` | Process, tool reach, and prohibitions for the agent. |
+| Context | `contexts/<pack>/` | Foundational rules and resources for a specific product or surface. |
 
 The test for a new rule: if it names a color, a typeface, or a domain concept, it belongs in a context pack. If it would be wrong on an internal tool, it belongs in a context pack.
 
@@ -30,26 +27,18 @@ This matters because not everything I design is Vivid Seats branded. Internal to
 
 ## Running it
 
-Give the agent a brief. It will state the context and the path before it builds anything:
+Give the agent a brief. It will state the context and the path before it builds anything. If the brief does not make the context obvious, it asks. It never assumes which product or company is being used for.
+
+
+## References
 
 ```
-Context: vivid-web. Path: full run (references, 3 directions, then your pick).
-Brief: a listing row for the seat map panel that makes Deal Score legible at a glance.
-```
-
-Paths: full run, directions only, references only, or refine a chosen direction. Code prototyping is not built yet; the agent will say so rather than improvise.
-
-If the brief does not make the context obvious, it asks. It never assumes Vivid Seats.
-
-## Layout
-
-```
-CLAUDE.md      loader, plus how to talk to me
-rules.md       how the harness behaves
+CLAUDE.md      symlink to AGENTS.md (Claude Code loads it by name)
+AGENTS.md      how the harness behaves, plus how to talk to me
 quality.md     the bar a component clears before it's done
 skills/        the process, loaded per phase
-contexts/      product packs (tokens, assets, design reference)
-evals/         fixed briefs for checking whether changes helped
+contexts/      packaged product contexts for quickly establishing a visual language (tokens, assets, design reference)
+evals/         briefs to refine this harness over time
 ```
 
 ### Skills
@@ -69,7 +58,7 @@ evals/         fixed briefs for checking whether changes helped
 
 ## Keeping it honest
 
-`evals/` holds fixed briefs with known-good outcomes. Re-run one after changing a rule to find out whether the change helped. Without that, every edit to `rules.md` is a guess.
+`evals/` holds fixed briefs with known-good outcomes. Re-run one after changing a rule to find out whether the change helped. Without that, every edit to `AGENTS.md` is a guess.
 
 ## Credit
 

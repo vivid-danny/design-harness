@@ -2,7 +2,7 @@
 
 A fixed brief with a known outcome, re-run whenever the rules or skills change, to check whether the harness got better instead of just different.
 
-Without this, every change to `rules.md` or a skill is a guess. The harness accumulates instructions and nobody knows which ones are carrying weight.
+Without this, every change to `AGENTS.md` or a skill is a guess. The harness accumulates instructions and nobody knows which ones are carrying weight.
 
 ## Layout
 
@@ -41,6 +41,6 @@ Record the failure honestly. A run that looks good but skipped the axis step is 
 
 ## Using a result
 
-A missed condition points at a specific file. Divergence failures point at `rules.md` step 3 and `explore-directions`. Wrong-library components point at the search scoping rule. Invented data points at the hard rules. Fix the instruction, then re-run the same brief.
+A missed condition points at a specific file. Divergence failures point at `AGENTS.md` workflow step 3 and `explore-directions`. Wrong-library components point at the search scoping rule. Invented data points at the hard rules. Fix the instruction, then re-run the same brief.
 
 Keep the old run files. The point is the trend.

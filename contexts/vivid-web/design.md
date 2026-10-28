@@ -1,6 +1,6 @@
 # Vivid Seats Web
 
-Design reference for the Vivid Seats consumer web product. Read this with `rules.md` and `quality.md` before building.
+Design reference for the Vivid Seats consumer web product. Read this with `AGENTS.md` and `quality.md` before building.
 
 **Source of truth: vivid-web-athena.** The `tokens/` snapshot here was taken 2026-10-02. Guidance Athena's code can't express (philosophy, selection rules, domain logic) is condensed from the Vivid Seats Web Design System export. Where the two disagree, Athena wins.
 
@@ -97,7 +97,7 @@ Athena's design system lives in `src/design-system/components/`. Check there fir
 
 The Figma library also carries Badge, List Item, Search List Item, Navigation bar, Footer, Filter Row, Sheet, Dropdown Menu, and Toast. Search it before composing anything that sounds like one of those.
 
-**Before calling a component done:** run it against `../../quality.md` section 1 (empty, overflow, async, interactive, error states).
+**Before calling a component done:** run it against `../../quality.md` section 1 (sizing and tokens, text, interactive, remote data).
 
 Selection rules:
 - One primary button per view. Irreversible actions need a confirmation dialog. A loading button shows a spinner.
@@ -125,7 +125,7 @@ There is no "Good" tier. Exactly 10.0 is reserved for the single best deal, usua
 
 ## 6. Accessibility
 
-The baseline in `rules.md` applies. Specific to this product:
+The baseline in `AGENTS.md` applies. Specific to this product:
 - Visible focus: `outline: 2px solid currentColor; outline-offset: 2px`. Never `outline: none` without a replacement.
 - Native controls use `disabled`. Only custom focusable controls use `aria-disabled`. Never both.
 - Selected state must be distinguishable without perceiving hue.

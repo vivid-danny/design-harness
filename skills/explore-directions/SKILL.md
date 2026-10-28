@@ -7,7 +7,7 @@ description: Generate multiple distinct design directions in Figma using a desig
 
 Produce directions Danny can choose between. The value is the divergence. Three versions of one screen with small modifications teaches him nothing and wastes the review.
 
-Read `rules.md`, `quality.md`, and the active context pack's `design.md` before starting. Load the `figma:figma-use` skill before any `use_figma` call, and `figma:figma-generate-design` when building a full screen.
+Read `AGENTS.md`, `quality.md`, and the active context pack's `design.md` before starting. Load the `figma:figma-use` skill before any `use_figma` call, and `figma:figma-generate-design` when building a full screen.
 
 ## Phase 1: Ground the work
 
@@ -15,7 +15,7 @@ Before touching Figma, know four things:
 
 - **The design system.** Which library, and its library key for scoping searches.
 - **The surrounding context.** Where this renders, against what background, beside what neighbors, at what sizes.
-- **The real material.** A live component, a production screenshot, or a Figma frame. Per `rules.md`, don't start from a blank page.
+- **The real material.** A live component, a production screenshot, or a Figma frame. Per `AGENTS.md`, don't start from a blank page.
 - **The content.** Real names, real prices, real dates from the brief or a fixture. Never invented.
 
 ## Phase 2: Name the directions

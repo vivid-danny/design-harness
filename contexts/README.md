@@ -1,6 +1,6 @@
 # Contexts
 
-A context pack holds everything true about one product. The harness itself (`rules.md`, `quality.md`, `skills/`) holds everything true about how Danny works. Swapping packs is how the same harness designs for Vivid Seats Web one day and an internal tool the next without dragging Vivid's palette and voice along.
+A context pack holds everything true about one product. The harness itself (`AGENTS.md`, `quality.md`, `skills/`) holds everything true about how Danny works. Swapping packs is how the same harness designs for Vivid Seats Web one day and an internal tool the next without dragging Vivid's palette and voice along.
 
 ## Packs
 
@@ -30,3 +30,7 @@ If the product has no design system at all, say so and ask for material rather t
 - Read only the active pack. Don't borrow components, tokens, or voice across packs.
 - Scope every `search_design_system` call to the active pack's library key. Unscoped searches return components from every library in the org.
 - Non-branded work gets no brand spin. An internal tool does not inherit consumer brand voice or a consumer palette because that's the pack you used last.
+
+## Why packs are files, not skills
+
+A pack looks like it could be a skill: a description, some instructions, a folder of resources. It isn't one, on purpose. Skills get selected when their description matches the request, and the first rule here is that the agent names the pack and asks when the brief leaves it unclear. Matching on "this sounds like consumer web" is the inference that rule exists to prevent.

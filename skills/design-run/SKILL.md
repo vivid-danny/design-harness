@@ -7,7 +7,7 @@ description: Entry point for design production work in this harness. Use when th
 
 The front door. Read the brief, name the context and the path, then run the phases that apply.
 
-Read `rules.md` and `quality.md` first. Read the active context pack's `design.md` once the context is settled.
+Read `AGENTS.md` and `quality.md` first. Read the active context pack's `design.md` once the context is settled.
 
 ## Before anything else
 
