@@ -1,6 +1,6 @@
 # Vivid Seats Web
 
-Design reference for the Vivid Seats consumer web product. Read this with `AGENTS.md` and `quality.md` before building.
+Design reference for the Vivid Seats consumer web product. Read this with `AGENTS.md` before building, plus whichever quality file the work calls for.
 
 **Source of truth: vivid-web-athena.** The `tokens/` snapshot here was taken 2026-10-02. Guidance Athena's code can't express (philosophy, selection rules, domain logic) is condensed from the Vivid Seats Web Design System export. Where the two disagree, Athena wins.
 
@@ -25,14 +25,14 @@ Always pass it as `includeLibraryKeys`. Unscoped searches return components from
 
 ## 2. Tokens
 
-Files in `tokens/`. Import the `variables.css` files; don't hardcode the values below.
+Files in `tokens/`. Import the `.css` files; don't hardcode the values below.
 
 | Set | File | Names |
 |---|---|---|
-| Semantic colors | `tokens/semantic-colors/variables.css` | `--text-*`, `--links-*`, `--surface-*`, `--primary-*`, `--secondary-*`, `--tertiary-*`, `--background-*`, `--status-*`, `--shadow-*`, `--transparencies-*` |
-| Primitive colors | `tokens/primitive-colors/variables.css` | `--gray-*`, `--magenta-*`, `--blue-*`, ... (prefer semantic) |
-| Spacing and radius | `tokens/layout-tokens/variables.css` | `--spacing-*`, `--radius-*` |
-| Type scale | `tokens/config/typography.json` | no CSS vars; see section 3 |
+| Semantic colors | `tokens/semantic-colors.css` | `--text-*`, `--links-*`, `--surface-*`, `--primary-*`, `--secondary-*`, `--tertiary-*`, `--background-*`, `--status-*`, `--shadow-*`, `--transparencies-*` |
+| Primitive colors | `tokens/primitive-colors.css` | `--gray-*`, `--magenta-*`, `--blue-*`, ... (prefer semantic) |
+| Spacing and radius | `tokens/layout.css` | `--spacing-*`, `--radius-*` |
+| Type scale | `tokens/typography.css` | `--font-family`, `--{role}-font-size`, `-font-weight`, `-line-height`; see section 3 |
 | Breakpoints, elevation, z-index | `tokens/scss/` | SCSS only (`$breakpoint-*`, `$elevation-*`, `$z-index-*`) |
 
 ### Color (semantic)
@@ -57,7 +57,7 @@ Files in `tokens/`. Import the `variables.css` files; don't hardcode the values 
 
 ## 3. Typography
 
-Font: **GT Walsheim** (fallbacks: Poppins, Helvetica, Arial, sans-serif). Weights used: 400, 500, 700, 800. Source: `tokens/config/typography.json`.
+Font: **GT Walsheim** (fallbacks: Poppins, Helvetica, Arial, sans-serif). Weights used: 400, 500, 700, 800. Source: `tokens/typography.css`.
 
 | Role | Size / line height | Weight |
 |---|---|---|
@@ -97,7 +97,7 @@ Athena's design system lives in `src/design-system/components/`. Check there fir
 
 The Figma library also carries Badge, List Item, Search List Item, Navigation bar, Footer, Filter Row, Sheet, Dropdown Menu, and Toast. Search it before composing anything that sounds like one of those.
 
-**Before calling a component done:** run it against `../../quality.md` section 1 (sizing and tokens, text, interactive, remote data).
+**Before calling a component done:** run it against `../../production-quality.md` (sizing and tokens, text, interactive, remote data) and `../../design-quality.md`.
 
 Selection rules:
 - One primary button per view. Irreversible actions need a confirmation dialog. A loading button shows a spinner.
@@ -140,6 +140,14 @@ The baseline in `AGENTS.md` applies. Specific to this product:
 
 **Extra-bold weight.** The type scale uses weight 800 for title-lg/xl/xxl, but the only faces in `assets/fonts/` are Regular (400), Medium (500), Bold (700), and Black (900). Treat 800 as Black: declare Black at `font-weight: 900` and let CSS font matching resolve an 800 request to the heavier face. Unconfirmed with the design system team, so keep using the 800 value from the type scale rather than hardcoding 900.
 
-## 9. Not covered yet
+## 9. Reference set
+
+For `gather-references`. Ring order and the bias rules live in that skill; this is who the rings contain for this product.
+
+**Direct competitors:** StubHub, SeatGeek, Ticketmaster, Gametime, TickPick.
+
+**Adjacent:** travel and event booking (airline seat selection, hotel, OpenTable, Resy), commerce checkout (Amazon, Shopify storefronts, DoorDash), anything with a fee breakdown the user has to accept.
+
+## 10. Not covered yet
 
 Page layouts (performer, checkout, event and seat map), motion tokens, and map colors. Add when a project needs them.

@@ -7,20 +7,22 @@ description: Entry point for design production work in this harness. Use when th
 
 The front door. Read the brief, name the context and the path, then run the phases that apply.
 
-Read `AGENTS.md` and `quality.md` first. Read the active context pack's `design.md` once the context is settled.
+Read `AGENTS.md` first. Read the active context pack's `design.md` once the context is settled. Read `design-quality.md` on any path. Read `production-quality.md` only on a production path.
 
 ## Before anything else
 
 State two things in one or two lines, then proceed:
 
 ```
-Context: vivid-web. Path: full run (references, 3 directions, then your pick).
+Context: vivid-web. Exploration, full run (references, 3 directions, then your pick).
 Brief: a listing row for the seat map panel that makes Deal Score legible at a glance.
 ```
 
 **Context.** Which pack under `contexts/`. The brief or the project goals usually make it obvious. When they don't, ask. Never assume Vivid Seats, and never carry the last project's context into this one.
 
-**Path.** Which of the routes below. Never pick silently.
+**Path.** Which of the routes below, and which kind of work it is. Never pick silently.
+
+**Kind.** Exploration or production, per `AGENTS.md`. This sets the finish line, so getting it wrong costs a whole run. Asking for ideas, concepts, directions, or options is exploration and stops at resting state. Asking to build, update, fix, or spec a decided thing is production and runs the `production-quality.md` gate. A brief carrying both ("explore the tray, then build it") is two runs; do the exploration and stop for the pick.
 
 **Brief.** Restate it in one sentence: what it is, where it lives, what it has to do. A brief you can't restate in one sentence is a brief you don't understand yet.
 
@@ -31,7 +33,8 @@ Brief: a listing row for the seat map panel that makes Deal Score legible at a g
 | **Full run** | A concept needs exploring | `gather-references` → `explore-directions` → stop for the pick |
 | **Directions only** | Danny has the references, or they aren't needed | `explore-directions` → stop for the pick |
 | **References only** | Danny wants to see how others solved it before committing to anything | `gather-references` |
-| **Refine a direction** | A direction is already chosen and needs detail, states, or copy | `explore-directions` on the single direction, plus `write-copy` |
+| **Refine a direction** | A direction is already chosen and needs detail, states, or copy | `explore-directions` on the single direction, plus `write-copy`. Production: the gate applies |
+| **Production task** | A decided component or screen needs building, updating, or fixing | Build it against the pack, run `production-quality.md`. `gather-references` when a specific choice is still open |
 
 **Code prototyping is not defined in this harness yet.** If the brief asks for a working prototype, say that the code path isn't built and offer the Figma path instead. Don't improvise a playground, don't scaffold a build, and don't produce a single HTML file as a substitute.
 

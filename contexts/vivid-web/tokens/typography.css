@@ -1,0 +1,107 @@
+/**
+ * Type scale. Converted from the design system's typography export.
+ */
+
+:root {
+  --font-family: 'GT-Walsheim', sans-serif;
+
+  --credit-card-label-font-size: 0.875rem;
+  --credit-card-label-font-weight: 500;
+
+  --step-label-font-size: 1rem;
+  --step-label-font-weight: 500;
+
+  --title-sm-font-size: 1.125rem;
+  --title-sm-font-weight: 700;
+  --title-sm-line-height: 1.40625rem;
+
+  --title-md-font-size: 1.25rem;
+  --title-md-font-weight: 700;
+  --title-md-line-height: 1.5625rem;
+
+  --title-lg-font-size: 1.5rem;
+  --title-lg-font-weight: 800;
+  --title-lg-line-height: 1.875rem;
+
+  --title-xl-font-size: 2rem;
+  --title-xl-font-weight: 800;
+  --title-xl-line-height: 2.5rem;
+
+  --title-xxl-font-size: 2.5rem;
+  --title-xxl-font-weight: 800;
+  --title-xxl-line-height: 3.125rem;
+
+  --subtitle-sm-font-size: 1rem;
+  --subtitle-sm-font-weight: 400;
+  --subtitle-sm-line-height: 1.25rem;
+
+  --subtitle-md-font-size: 1.125rem;
+  --subtitle-md-font-weight: 400;
+  --subtitle-md-line-height: 1.375rem;
+
+  --subtitle-lg-font-size: 1.25rem;
+  --subtitle-lg-font-weight: 400;
+  --subtitle-lg-line-height: 1.5625rem;
+
+  --subtitle-xl-font-size: 1.5rem;
+  --subtitle-xl-font-weight: 400;
+  --subtitle-xl-line-height: 1.875rem;
+
+  --subtitle-xxl-font-size: 2rem;
+  --subtitle-xxl-font-weight: 400;
+  --subtitle-xxl-line-height: 2.5rem;
+
+  --overline-font-size: 0.75rem;
+  --overline-font-weight: 700;
+  --overline-line-height: 0.9375rem;
+  --overline-letter-spacing: 0.075rem;
+
+  --body-bold-font-size: 1rem;
+  --body-bold-font-weight: 700;
+  --body-bold-line-height: 1.5rem;
+
+  --body-medium-font-size: 1rem;
+  --body-medium-font-weight: 500;
+  --body-medium-line-height: 1.5rem;
+
+  --body-regular-font-size: 1rem;
+  --body-regular-font-weight: 400;
+  --body-regular-line-height: 1.5rem;
+
+  --body-link-font-size: 1rem;
+  --body-link-font-weight: 400;
+  --body-link-line-height: 1.5rem;
+  --body-link-text-decoration-line: underline;
+
+  --small-bold-font-size: 0.875rem;
+  --small-bold-font-weight: 700;
+  --small-bold-line-height: 1.3125rem;
+
+  --small-medium-font-size: 0.875rem;
+  --small-medium-font-weight: 500;
+  --small-medium-line-height: 1.3125rem;
+
+  --small-regular-font-size: 0.875rem;
+  --small-regular-font-weight: 400;
+  --small-regular-line-height: 1.3125rem;
+
+  --caption-bold-font-size: 0.75rem;
+  --caption-bold-font-weight: 700;
+  --caption-bold-line-height: 1.125rem;
+
+  --caption-medium-font-size: 0.75rem;
+  --caption-medium-font-weight: 500;
+  --caption-medium-line-height: 1.125rem;
+
+  --caption-regular-font-size: 0.75rem;
+  --caption-regular-font-weight: 400;
+  --caption-regular-line-height: 1.125rem;
+
+  --footnote-regular-font-size: 0.625rem;
+  --footnote-regular-font-weight: 400;
+  --footnote-regular-line-height: 0.9375rem;
+
+  --footnote-bold-font-size: 0.625rem;
+  --footnote-bold-font-weight: 700;
+  --footnote-bold-line-height: 0.9375rem;
+}

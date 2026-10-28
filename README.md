@@ -17,7 +17,7 @@ Three layers to help an agent work through the various stages of design.
 
 | Layer | File | What belongs there |
 |---|---|---|
-| Standards | `quality.md` | Baseline checks to help determine when something is done. |
+| Standards | `production-quality.md`, `design-quality.md` | The gate for when something is done, and the craft lens for whether it's any good. |
 | Behavior | `AGENTS.md`, `skills/` | Process, tool reach, and prohibitions for the agent. |
 | Context | `contexts/<pack>/` | Foundational rules and resources for a specific product or surface. |
 
@@ -33,12 +33,13 @@ Give the agent a brief. It will state the context and the path before it builds 
 ## References
 
 ```
-CLAUDE.md      symlink to AGENTS.md (Claude Code loads it by name)
-AGENTS.md      how the harness behaves, plus how to talk to me
-quality.md     the bar a component clears before it's done
-skills/        the process, loaded per phase
-contexts/      packaged product contexts for quickly establishing a visual language (tokens, assets, design reference)
-evals/         briefs to refine this harness over time
+CLAUDE.md               symlink to AGENTS.md (Claude Code loads it by name)
+AGENTS.md               how the harness behaves, plus how to talk to me
+production-quality.md   the bar a component clears before it's done
+design-quality.md       the craft lens, read in both kinds of work
+skills/                 the process, loaded per phase
+contexts/               packaged product contexts for quickly establishing a visual language (tokens, assets, design reference)
+.claude/hooks/          the checks that enforce the communication style
 ```
 
 ### Skills
@@ -58,7 +59,7 @@ evals/         briefs to refine this harness over time
 
 ## Keeping it honest
 
-`evals/` holds fixed briefs with known-good outcomes. Re-run one after changing a rule to find out whether the change helped. Without that, every edit to `AGENTS.md` is a guess.
+A `Stop` hook checks every reply against the communication style and logs the measurements to `~/.cache/claude-brevity/metrics.jsonl`. Without a record, every edit to `AGENTS.md` is a guess about whether the wording carried any weight.
 
 ## Credit
 

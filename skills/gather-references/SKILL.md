@@ -24,7 +24,17 @@ Find evidence that settles a decision. Not a research phase, not a moodboard exe
 - Keep `task_intent` identical across every call in one run.
 - Query one screen or one journey per call, in plain language, starting with what kind of screen it is. Name a specific app to filter to it. Don't stack multiple intents into one query, don't add elements Danny didn't ask about, and don't pad with style words like "modern" or "clean".
 
-Competitors worth naming directly when the work is consumer ticketing: StubHub, SeatGeek, Ticketmaster.
+## Where to look, in order
+
+Start near and widen. Each ring answers a different question, so stopping at the first one gives you convention and skipping to the last one gives you something unbuildable.
+
+**1. Direct competitors.** Who they are comes from the active context pack, never from this skill. Search these first on any project, even when you expect to reject what they do, since a competitor pattern will come up in review whether or not it's in the set.
+
+**2. Adjacent industries.** Commerce, booking, and anything else with a cart, a checkout, a seat or date selection, or a fee breakdown. Same mechanics, different domain, so the pattern transfers without the convention coming along.
+
+**3. Unrelated products.** Where to go when the near rings all converge on the same answer and the convention is what you're questioning. Productivity tools, games, finance, anything. Expect a lower hit rate and judge each one on whether the mechanic survives the move, not on whether the screen is good.
+
+Most runs end in ring 1 or 2. Reach ring 3 when the decision is about whether a convention still earns its place, and say that's why you went there.
 
 ## The rule that matters
 
@@ -38,7 +48,9 @@ Lead with the finding, not the catalog. Three references that answer the decisio
 
 For each one: what it does, and what that implies for the decision you named. Cite it as a markdown link to its `mobbin_url` so Danny can open it. Separate what you observed from what you inferred.
 
-**Popularity proves nothing about usability.** A pattern appearing in four products means four teams shipped it, not that it converts or that users understand it. Say "common" when it's common. Don't say "proven".
+**Popularity proves nothing about usability.** A pattern appearing in four products means four teams shipped it, not that it converts or that users understand it. Say "common" when it's common. Don't say "proven". This applies hardest to a competitor, whose pattern carries the most weight in a review while proving the least.
+
+**Say which ring each reference came from**, so Danny can see whether the set is all convention or whether anything in it was a real alternative.
 
 Stop when the evidence answers the decision.
 

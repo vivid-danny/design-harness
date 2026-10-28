@@ -19,6 +19,19 @@ Exits 1 when a blocker is present. It reports and never rewrites; restructuring 
 
 Run it on anything long enough to hide a tell: a handoff, a spec, a set of empty states. A three-word button label does not need it.
 
+## The chat checker
+
+`chat_check.py` is the companion, and it measures the shape of a whole reply rather than its sentences: length against a tier ceiling, section headers, bullet count, and whether the prose restates a file the same turn edited.
+
+```
+python3 -I skills/write-copy/chat_check.py --tier base -
+python3 -I skills/write-copy/chat_check.py --tier tight --edits edits.json --json -
+```
+
+Tiers are `tight`, `base`, `detail`, and `document`, which is exempt. `--edits` takes a JSON array of the `content` and `new_string` values from the turn's Write and Edit calls; without it the restatement check is skipped.
+
+The `Stop` hook in `.claude/hooks/` runs both tools on every reply and picks the tier from signals the model can't author: the user's own message, the turn's tool calls, and `permissionMode`. Reaching for either tool by hand is for testing a draft; the hook is what makes the rules bind.
+
 | Severity | Meaning |
 |---|---|
 | blocker | Breaks a hard rule. Fix before shipping the text. |
@@ -37,7 +50,7 @@ The text inside mockups and prototypes.
 - **Brand voice comes from the active context pack**, never from this skill. Non-branded work gets no brand spin, so an internal tool does not inherit a consumer tone because that was the last pack you read.
 - **Never invent a number, a fee, or a legal line.** Those come from the brief or the context pack. Mark placeholders as placeholders.
 
-Real copy at real length is part of the design. Placeholder text hides the overflow problems `quality.md` section 1.2 exists to catch.
+Real copy at real length is part of the design. Placeholder text hides the overflow problems `production-quality.md` section 1.2 exists to catch.
 
 ## Harness prose
 
