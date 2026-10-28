@@ -30,7 +30,7 @@ What a good response looks like, written before or independently of any run. Not
 - Are the directions distinct, or three versions of one screen?
 - Did it use library components, or draw lookalikes?
 - Did it name what it fabricated?
-- Does the output clear `quality.md` section 1?
+- Does the output clear `production-quality.md`?
 - Is the copy clean per `skills/write-copy/linter.py`?
 
 ## `runs/`

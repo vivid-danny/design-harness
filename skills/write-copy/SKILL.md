@@ -37,7 +37,7 @@ The text inside mockups and prototypes.
 - **Brand voice comes from the active context pack**, never from this skill. Non-branded work gets no brand spin, so an internal tool does not inherit a consumer tone because that was the last pack you read.
 - **Never invent a number, a fee, or a legal line.** Those come from the brief or the context pack. Mark placeholders as placeholders.
 
-Real copy at real length is part of the design. Placeholder text hides the overflow problems `quality.md` section 1.2 exists to catch.
+Real copy at real length is part of the design. Placeholder text hides the overflow problems `production-quality.md` section 1.2 exists to catch.
 
 ## Harness prose
 

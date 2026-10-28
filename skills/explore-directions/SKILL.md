@@ -7,7 +7,9 @@ description: Generate multiple distinct design directions in Figma using a desig
 
 Produce directions Danny can choose between. The value is the divergence. Three versions of one screen with small modifications teaches him nothing and wastes the review.
 
-Read `AGENTS.md`, `quality.md`, and the active context pack's `design.md` before starting. Load the `figma:figma-use` skill before any `use_figma` call, and `figma:figma-generate-design` when building a full screen.
+**This is exploration, not production.** See the two kinds of work in `AGENTS.md`. Draw what the comparison needs and stop there. Detail spent on a direction that gets dropped is detail wasted, and it buries the comparison the exploration exists to give him. Production detail arrives after Danny picks, as a separate run.
+
+Read `AGENTS.md` and the active context pack's `design.md` before starting. `production-quality.md` is a production gate and doesn't apply here. `design-quality.md` does, from the first frame. Load the `figma:figma-use` skill before any `use_figma` call, and `figma:figma-generate-design` when building a full screen.
 
 ## Phase 1: Ground the work
 
@@ -33,6 +35,7 @@ Before touching Figma, know four things:
 - Default 3. More only when Danny asks. Past 5 the comparison dilutes.
 - **Names describe the direction.** "Dense", "Guided", "Editorial", "Compact". Never "Option A/B/C", never "Version 1/2/3".
 - **The axis is what the direction answers differently.** Layout, density, hierarchy, interaction model, how much the interface decides for the user, how much the user has to read.
+- **One line per direction. No second sentence.** The frames carry the argument. If the axis needs a paragraph to explain, it isn't an axis yet.
 - **No two directions share an axis position.** If two differ only in accent color, spacing, or copy, they are one direction. Replace one with a real alternative.
 - Sharing the pack's tokens is not convergence. Every direction should look like it could ship in this product.
 
@@ -44,19 +47,19 @@ Before touching Figma, know four things:
 - Instantiate library components and bind fills, spacing, and type to the library's variables. Never rebuild an existing component from rectangles and text.
 - Place work inside a Section or Frame, never loose on the canvas. Check for an existing page before creating one.
 - Never edit the design system library file. Work in a separate file or page.
-- Each direction gets its own frame, labeled with its name and axis so the canvas is readable without the chat.
+- Each direction gets its own frame, labeled with its name and a one-line axis so the canvas is readable without the chat. That label is the only text you add to the canvas. No rationale paragraphs, no notes section, no summary block.
 
 **When the library has nothing that fits:** compose from existing components and tokens, keep going, and record what you fabricated. Component gaps are normal, not an error state. Don't stall for permission.
 
 **Content realism.** Real names, plausible numbers and dates, strings at the length they occur in the product. Placeholder text hides every layout problem you are trying to find. Domain values (scores, tiers, fee rules, status labels) come only from the context pack or a fixture the user supplied.
 
-**Interactive states are part of the design.** Specify hover, focus, active, disabled, and selected rather than implying them. Draw the states that distinguish the direction; a direction whose whole idea is a selection model has to show selection.
+**States are optional here, and the brief decides.** The resting state is the floor. Draw more when the direction lives in them: an interaction concept, a selection model, a tray that only exists open. Draw fewer, or just the one, when the comparison is about layout or hierarchy and a state matrix would only pad the canvas. A full set of hover, focus, active, and disabled is production work, so reach for it when asked and not by reflex.
 
 ## Phase 4: Look at it
 
 Screenshot each direction and inspect it. Check alignment, spacing, and whether the direction still reads as the axis you named.
 
-Run each direction against `quality.md` section 1. Overflow and empty are the two that most often break a direction that looked fine in the state you drew.
+Real content at real length is the one production concern that belongs here, because a direction that only holds at placeholder length isn't a direction. Everything else in `production-quality.md` waits for the production run.
 
 Iterate at most three times, then report. If a direction isn't working after three passes, say that rather than polishing it quietly.
 
@@ -64,7 +67,7 @@ Iterate at most three times, then report. If a direction isn't working after thr
 
 ## Phase 5: Hand off
 
-A table, then the file location:
+Short. A table, then the file location. The handoff explains what's on the canvas, it doesn't re-argue it, and no cell runs past a line:
 
 | Direction | Axis | When it wins | What it costs |
 |---|---|---|---|
