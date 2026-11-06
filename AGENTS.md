@@ -43,7 +43,7 @@ Steps 1 through 4 apply to both kinds. Steps 5 and 6 are production.
 
 ## Hard rules
 
-- **Tokens only.** No raw hex, px, or rem. Use the variables the active context provides. If a needed value has no token, stop and say so. Never mint one.
+- **Tokens only.** No raw hex, px, or rem. Use the variables the active context provides. If a needed value has no token, stop and say so. Never create one.
 - **Reuse before invent.** Check the context pack's component table and its Figma library first.
 - **Composing is allowed; lookalikes are not.** When the design system has nothing that fits, compose from existing components and tokens. State plainly what you fabricated and what you assumed. Don't quietly rebuild an existing component from rectangles and text.
 - **Don't invent data.** Prices, fees, labels, scores, and tiers come from the context pack or a resource the user supplied. Mark placeholder content as placeholder.
