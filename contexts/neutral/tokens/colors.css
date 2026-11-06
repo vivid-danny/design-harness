@@ -1,0 +1,81 @@
+/**
+ * Neutral pack colors. Minted for this pack, not exported from a product.
+ * Variable names mirror vivid-web so work can be re-pointed at a real pack.
+ */
+
+:root {
+  /* Primitives. Prefer the semantic names below */
+  --gray-0: #FFFFFF;
+  --gray-50: #F7F7F8;
+  --gray-100: #EEEEF0;
+  --gray-200: #DCDCE0;
+  --gray-300: #C2C2C9;
+  --gray-400: #9A9AA4;
+  --gray-500: #71717C;
+  --gray-600: #52525B;
+  --gray-700: #3F3F46;
+  --gray-800: #27272C;
+  --gray-900: #18181B;
+
+  --accent-50: #EFF4FF;
+  --accent-100: #DBE6FE;
+  --accent-300: #93B4FD;
+  --accent-500: #2F6FEB;
+  --accent-600: #1D54C4;
+  --accent-700: #16409A;
+
+  /* Text */
+  --text-primary: #18181B;
+  --text-secondary: #52525B;
+  --text-disabled: #9A9AA4;
+  --text-contrast: #FFFFFF;
+
+  /* Links */
+  --links-enabled: #1D54C4;
+  --links-pressed: #16409A;
+  --links-disabled: #C2C2C9;
+  --links-contrast: #FFFFFF;
+
+  /* Surfaces */
+  --background-default: #FFFFFF;
+  --background-off-white: #F7F7F8;
+  --background-backdrop: #18181B99;
+  --surface-background: #F7F7F8;
+  --surface-divider: #DCDCE0;
+  --surface-white: #FFFFFF;
+  --surface-black: #000000;
+  --surface-gray-interaction-hover: #52525B0A;
+  --surface-gray-interaction-selected: #52525B14;
+
+  /* Primary, the pack's only accent */
+  --primary-lightest: #EFF4FF;
+  --primary-light: #93B4FD;
+  --primary-main: #1D54C4;
+  --primary-dark: #16409A;
+  --primary-darkest: #102C68;
+  --primary-contrast: #FFFFFF;
+  --primary-interaction-hover: #1D54C40A;
+  --primary-interaction-selected: #1D54C414;
+
+  /* Status */
+  --status-error-light: #FBE9E9;
+  --status-error-main: #C02626;
+  --status-error-dark: #8E1C1C;
+  --status-error-contrast: #FFFFFF;
+  --status-warning-light: #FDF2E3;
+  --status-warning-main: #B45309;
+  --status-warning-dark: #873E07;
+  --status-warning-contrast: #FFFFFF;
+  --status-success-light: #E6F2EB;
+  --status-success-main: #156F3F;
+  --status-success-dark: #0F5330;
+  --status-success-contrast: #FFFFFF;
+  --status-info-light: #EFF4FF;
+  --status-info-main: #1D54C4;
+  --status-info-dark: #16409A;
+  --status-info-contrast: #FFFFFF;
+
+  /* Shadow */
+  --shadow-default-weak: #18181B26;
+  --shadow-default-strong: #18181B40;
+}

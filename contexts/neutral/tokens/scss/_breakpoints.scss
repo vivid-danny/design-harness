@@ -1,0 +1,6 @@
+// Media queries can't read var(), so breakpoints live here.
+// Values match vivid-web so layout work ports between packs.
+
+$breakpoint-m: 48rem;  // 768px
+$breakpoint-l: 64rem;  // 1024px
+$breakpoint-xl: 90rem; // 1440px

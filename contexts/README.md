@@ -7,6 +7,7 @@ A context pack holds everything true about one product. The harness itself (`AGE
 | Pack | Product | Figma library |
 |---|---|---|
 | `vivid-web/` | Vivid Seats consumer web | VS Web Design System |
+| `neutral/` | None. Unbranded work with no design system | none |
 
 The org runs other libraries that may each become a pack: Vivid Seats App Design System, Distribution Design System (carries a `Partner Config` collection for white-labeled partner sites), PGM Design System, QCI Emails, Transactional Emails.
 
@@ -18,6 +19,12 @@ The org runs other libraries that may each become a pack: Vivid Seats App Design
 - **`assets/`** with fonts, logos, and icons.
 
 A pack with no `design.md` is not a pack. The agent will not infer one.
+
+## The neutral pack
+
+`neutral/` is the pack for work that has no product behind it: greenfield concepts, internal tools, prototypes. It carries a token set, a type scale, and the accessibility baseline, and deliberately nothing else: no platform facts, no voice, no domain logic, no assets, no references. Its token names mirror `vivid-web`, so work built on it can be re-pointed at a real pack by swapping imports.
+
+It is not a default. The rule below still applies: name the pack, and ask when the brief leaves it unclear. `neutral/` is what you use when the answer comes back "there isn't one," never a fallback picked because asking felt slow. Its values were written for the pack rather than taken from a product, so nothing built on it is a production handoff.
 
 ## Adding a pack
 
