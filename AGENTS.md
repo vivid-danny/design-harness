@@ -47,7 +47,7 @@ Steps 1 through 4 apply to both kinds. Steps 5 and 6 are production.
 - **Reuse before invent.** Check the context pack's component table and its Figma library first.
 - **Composing is allowed; lookalikes are not.** When the design system has nothing that fits, compose from existing components and tokens. State plainly what you fabricated and what you assumed. Don't quietly rebuild an existing component from rectangles and text.
 - **Don't invent data.** Prices, fees, labels, scores, and tiers come from the context pack or a resource the user supplied. Mark placeholder content as placeholder.
-- **Accessibility is baseline, not polish.** WCAG 2.1 AA. Native `<button>` for actions, never `onClick` on a `<div>`. Visible focus on everything focusable. `aria-pressed` on toggles. Labeled meaningful icons, `aria-hidden` on decorative ones. Keyboard reachable and operable throughout.
+- **Accessibility is baseline, not polish.** WCAG 2.2 AA. Native `<button>` for actions, never `onClick` on a `<div>`. Visible focus on everything focusable. `aria-pressed` on toggles. Labeled meaningful icons, `aria-hidden` on decorative ones. Keyboard reachable and operable throughout.
 - **One primary action per view.** Button labels are single-line Title Case.
 - **Assets as-is.** Use the context pack's icons and logos unmodified. Don't redraw or recolor them.
 - **Keep scope tight.** Do what was asked. No unrelated refactors, no extra features.
@@ -64,8 +64,9 @@ Code exploration is still a real option when the user asks for it, and it's wort
 - Scope every design system search to that library's key. `search_design_system` searches every library in the org at once, so an unscoped search returns components from the wrong products. Pass `includeLibraryKeys`.
 - Load the `figma:figma-use` skill before any `use_figma` call. For building full screens from code or a description, also load `figma:figma-generate-design`.
 - Place work inside a Section or Frame, not loose on the canvas. Screenshot after changes, check alignment and spacing, and iterate at most three times before reporting.
+- Adds labels only for wayfinding. This makes the file easy to navigate and obvious to read. A Figma section should include a plain-language title of the change at its left edge. Each group of frames contains a heading naming the page or state, with the devices under it on a second line. In exploration the heading is the direction name and the second line is its divergence axis.
 - Do not include any design reasoning on the canvas. In exploration, a frame gets its name and a single line naming its divergence axis. In production, add only what the artifact can't show on its own: a state name, a width behavior, an overflow outcome. Rationale paragraphs, notes section, or summary block are not allowed.
-- **Don't annotate what the ticket already says.** Engineers skip long annotation, and a spec that restates the ticket is a second source to keep in sync.
+- Don't annotate what the ticket already says. Engineers skip long annotation, and a spec that restates the ticket is a second source to keep in sync.
 - Check for an existing page before creating one.
 - Don't edit the design system library file itself. Work in a separate file or page.
 

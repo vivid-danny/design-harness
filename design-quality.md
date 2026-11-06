@@ -1,45 +1,74 @@
 # Design Quality
 
 
-**This file applies to both kinds of work.** An exploration and a production build are judged by the same craft questions. `production-quality.md` asks whether the information is there, which only a decided component owes. This file asks whether the result is any good, which a direction owes from the first frame.
+**This file applies to both kinds of work.** An exploration and a production build are judged by the same craft questions. This file guides the agent to a better result and output regardless of the type of work.
 
 Read this document with the active context pack's `design.md`, which has the product facts these questions refer to.
 
-**The one exemption is deliberate low fidelity.** When Danny asks for wireframes, a greybox, or a sketch, hierarchy still applies and the rest waits. Low fidelity is a request, never a default, and never something you decide to deliver on your own.
+**The one exemption is deliberate low fidelity.** When Danny asks for wireframes, a greybox, or a sketch, this file waits. Low fidelity is a request, never a default, and never something the agent delivers on its own.
 
-## 1. Hierarchy: can you name the reading order?
+## 1. Hierarchy
 
-- **Hierarchy is explicit.** Can you say what gets read first, second, and third? Do size, weight, and color agree with that order, or do two of them argue?
-- **The sizes are a decision.** Can you defend every distinct size in the component, or did the count accumulate as elements were added?
-- **The text colors are a decision.** Same question. Levels of text color are hierarchy; disabled and inverse are states and don't count toward it.
-- **Line length is set rather than inherited.** Does body copy have a measure you chose? Text running the full width of a wide container is tiring to read, and the fix is a max width rather than a smaller size.
+- Name the reading order before you build: first, second, third.
+- Size, weight, and color agree with that order. When two of them disagree, the hierarchy is broken.
+- Every distinct type size is defensible. Counts accumulate when nobody decides.
+- Levels of text color are hierarchy. Disabled and inverse are states and don't count toward it.
+- Body copy gets a max width, not a smaller size. Text running the full width of a wide container is tiring to read.
 
-## 2. Color: is every use of color doing work?
+## 2. Typography
 
-- **The strongest color is on the most important thing.** Does the highest-saturation element on the surface match what you want looked at first? If three things carry brand color, none of them is the primary action.
-- **The surface is quiet enough for color to register.** Is most of the component neutral, so color reads as a signal instead of as the background?
-- **Meaning holds.** Does each color mean the same thing everywhere? Status colors report status, primary marks the primary action. Neither gets borrowed because a thing needed emphasis.
-- **Nothing is colored to fill space.** Can you say what each colored element is telling the user? A tint applied for visual interest is decoration, and it costs you a signal you'll want later.
+- Fewer sizes, stronger hierarchy. Three in a component is usually enough.
+- Weight carries emphasis before size does.
+- Text color encodes relationship: primary, secondary, tertiary. Don't add a fourth level without naming what it means.
+- Bind line height and letter spacing to the type scale. A size without its paired line height is half a decision.
+- All caps is for labels only. It slows reading at any length past a word or two.
 
-Contrast is the accessibility baseline in `AGENTS.md`. Whether the states exist at all is `production-quality.md` section 1.3. This file is about intent.
+## 3. Layout
 
-## 3. States that read
+- Spacing is built on a base unit of 8, subdivided to 4 and 2 for micro adjustments. Use the pack's spacing tokens, which usually encode this already.
+- A value outside the scale is a stop, not a judgment call. Say so rather than typing a number.
+- Spacing encodes grouping. Space inside a group is always tighter than space between groups.
+- Proximity is the grouping signal. Elements near each other read as one unit whatever the borders say.
+- White space is a density control. Add it to let the eye rest, not to fill the frame.
+- Align optically. Icons, punctuation, and round shapes need the eye, not the math.
+- Apply the rules the same way every time. Inconsistent spacing reads as broken rather than varied.
 
-- **Default is distinct.** Is each state visibly different from `default`, or does hover read as the resting state with a slight tint on top?
-- **Disabled explains itself.** Does the user know why it's disabled and what would enable it?
-- **Pending reassures.** Does the waiting state tell the user the system heard them, or does it only stop them from clicking again?
+## 4. Color
 
-## 4. Content that guides
+- The highest-saturation element on the surface is the thing to look at first. Three elements in brand color means no primary action.
+- Most of the surface is neutral. Color reads as a signal only against quiet.
+- Each color means one thing everywhere. Status colors report status, primary marks the primary action, and neither gets borrowed for emphasis.
+- Error, warning, success, and info are reserved. They never run decoratively.
+- Every colored element answers what it is telling the user. A tint for visual interest spends a signal you will want later.
 
-- **Empty states say what would fill them.** Does it give guidance ("No results yet") rather than blank space?
-- **Errors say what to do.** Does the message explain what's wrong and the fix, rather than "Invalid"?
-- **It survives without the icon.** Does it still make sense without the illustration or icon carrying the meaning?
-- **Labels earn their width.** Is every word in the component doing something, or is some of it narrating the interface back to the user?
+## 5. Accessibility
+
+- WCAG 2.2 AA is the floor: 4.5:1 for body text, 3:1 for large text and UI boundaries.
+- Touch targets are 24x24 CSS px minimum, 44x44 where the control sits on its own.
+- Color never carries meaning alone. Pair it with text, an icon, or position.
+- Focus is visible on everything focusable, and visible against the surface it sits on.
+- Reading order matches visual order.
+
+## 6. States
+
+- Every state is visibly different from default at a glance. A slight tint is not a state.
+- Disabled says why it is disabled and what would enable it.
+- Pending confirms the system heard the user. Blocking a second click is not the same as reassurance.
+- Nothing depends on hover. Touch has no hover.
+
+## 7. Content
+
+- Empty states say what would fill them.
+- Errors say what happened and what to do.
+- The design survives without the icon. Icons reinforce meaning and never carry it.
+- Every word earns its width. Cut copy that narrates the interface back to the user.
 
 Copy rules and the linter live in `skills/write-copy/`.
 
-## Not covered yet
+## 8. Motion
 
-Add when the work needs it:
-- Motion and transition quality (duration, easing, what animates and what doesn't)
-- Layout, density and alignment
+- Motion explains a change in state or position. When nothing changed, nothing animates.
+- Transitions are short enough to feel immediate. Anything the user waits on is too slow.
+- Elements entering ease out. Elements leaving ease in.
+- Content is readable before the motion finishes. Nothing essential sits behind an animation.
+- Reduced motion is honored. The design still works with every transition removed.
